@@ -4,8 +4,18 @@ site_name: NullXed's Notebook
 site_author: NullXed
 
 nav:
+  - 首页:
+    - 欢迎来到我的博客！: index.md
   - 数学:
     - pobablity: maths/probablity.md
+  #- 编程语言:
+    #- C:
+    #- python:
+  - 工具合集:
+    - mkDocs: tools/mkdocs.md
+  - 杂项:
+    - 各种教程推荐: 教程推荐.md
+    - 如何生产学术垃圾: how_to_produce_academic_garbage.md
 #[UI]
 theme:
   name: material
