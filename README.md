@@ -1,0 +1,2 @@
+# mkdocsNote
+ just my notes
