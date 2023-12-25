@@ -682,9 +682,11 @@ $$ P{X_1=x_1,X_2=x_2,...,X_n=x_n} = \prod_{i=1}^{n}P(X_i=x_i) $$
 <h3 id="722-">7.2.2 常见的统计量--样本矩<a class="headerlink" href="#722-" title="Permanent link">&para;</a></h3>
 <p>&emsp;&emsp;<strong>定义2</strong>&emsp;&emsp;设 <span class="arithmatex">\(X_1, X_2, ..., X_n\)</span> 是来自总体 <span class="arithmatex">\(X\)</span> 的一组样本， <span class="arithmatex">\(x_1, x_2, ..., x_n\)</span> 是这组样本的观察值。</p>
 <h4 id="7221">7.2.2.1 样本均值<a class="headerlink" href="#7221" title="Permanent link">&para;</a></h4>
-<div class="arithmatex">\[ \bar X = \frac{1}{n}\sum_{i=1}^{n}X_i \]</div>
+<p>$$ \bar X = \frac{1}{n}\sum_{i=1}^{n}X_i $$
+注：在原样本均值为 <span class="arithmatex">\(\mu\)</span>, 方差为 <span class="arithmatex">\(\sigma\)</span> 的情况下， <span class="arithmatex">\(\bar X\)</span> 的期望为 <span class="arithmatex">\(\mu\)</span>, 方差为 <span class="arithmatex">\(\frac{\sigma^2}{n}\)</span></p>
 <h4 id="7222">7.2.2.2 样本方差<a class="headerlink" href="#7222" title="Permanent link">&para;</a></h4>
-<div class="arithmatex">\[ S^2 = \frac{1}{n-1}\sum_{i=1}^{n}(X_i - \bar X)^2 \]</div>
+<p>$$ S^2 = \frac{1}{n-1}\sum_{i=1}^{n}(X_i - \bar X)^2 $$
+注：均值为 <span class="arithmatex">\(\sigma^2\)</span></p>
 <h4 id="7223">7.2.2.3 样本标准差<a class="headerlink" href="#7223" title="Permanent link">&para;</a></h4>
 <div class="arithmatex">\[ S = \sqrt{\frac{1}{n-1}\sum_[i=1]^{n}(X_i - \bar X)^2} \]</div>
 <h4 id="7224-k">7.2.2.4 样本 <span class="arithmatex">\(k\)</span> 阶原点矩<a class="headerlink" href="#7224-k" title="Permanent link">&para;</a></h4>
@@ -694,7 +696,27 @@ $$ P{X_1=x_1,X_2=x_2,...,X_n=x_n} = \prod_{i=1}^{n}P(X_i=x_i) $$
 <p>$$ B_k = \frac{1}{n}\sum_{i=1}^{k}(X_i - \bar X)^K \quad (k=1,2,...) $$
 注： <span class="arithmatex">\(B_2 = \frac{n-1}{n}S^2\)</span></p>
 <h3 id="723">7.2.3 样本矩与总体矩的关系<a class="headerlink" href="#723" title="Permanent link">&para;</a></h3>
-<h2 id="73">7.3 抽样分布的定义<a class="headerlink" href="#73" title="Permanent link">&para;</a></h2>
+<p>&emsp;&emsp;<strong>定理1</strong>&emsp;&emsp;设 <span class="arithmatex">\(X_1, X_2,...,X_n\)</span> 是来自总体 <span class="arithmatex">\(X\)</span> 的一组样本，若总体 <span class="arithmatex">\(X\)</span> 的 <span class="arithmatex">\(k\)</span> 阶原点矩存在，即设 <span class="arithmatex">\(\mu_k = E(X^k)\)</span> ，且 <span class="arithmatex">\(E(X) = \mu, D(X) = \sigma^2\)</span> ，设 <span class="arithmatex">\((X_1,X_2,...,X_n)\)</span> 是来自总体 <span class="arithmatex">\(X\)</span> 的一组简单随机样本，
+<strong>则样本矩具有如下性质：</strong>
+<span class="arithmatex">\(<span class="arithmatex">\(E(\bar X) = \mu, D(\bar X) = \frac{\sigma^2}{n};\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(E(S^2) = \sigma^2;\)</span>\)</span>
+<span class="arithmatex">\(<span class="arithmatex">\(E(A_k) = \mu_k.\)</span>\)</span></p>
+<h2 id="73">7.3 抽样分布<a class="headerlink" href="#73" title="Permanent link">&para;</a></h2>
+<h3 id="731">7.3.1 抽样分布的定义<a class="headerlink" href="#731" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;<font color="red"><strong>统计量的分布</strong></font>称为抽样分布</p>
+<h3 id="732-chi-2">7.3.2 <span class="arithmatex">\(\chi ^2\)</span> 分布<a class="headerlink" href="#732-chi-2" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;设 <span class="arithmatex">\(X_1,X_2,...,X_n\)</span> 为来自总体 <span class="arithmatex">\(N(0,1)\)</span> 的样本，则统计量
+<span class="arithmatex">\(<span class="arithmatex">\(\chi^2 = X_1^2+X_2^2+...+X_n^2\)</span>\)</span>
+&emsp;&emsp;服从<font color="red"><strong>自由度为</strong> <span class="arithmatex">\(n\)</span> </font>的 <span class="arithmatex">\(\chi^2\)</span> 分布，简记为 <span class="arithmatex">\(\chi^2 \sim \chi^2(n).\)</span></p>
+<p>&emsp;&emsp;其中<strong>自由度</strong>为上式右端包含独立变量的个数。</p>
+<h3 id="733-t">7.3.3 <span class="arithmatex">\(t\)</span> 分布<a class="headerlink" href="#733-t" title="Permanent link">&para;</a></h3>
+<h3 id="734">7.3.4 我也不知道这是啥定理<a class="headerlink" href="#734" title="Permanent link">&para;</a></h3>
+<p>&emsp;&emsp;设总体 <span class="arithmatex">\(X\)</span> 服从正态分布 <span class="arithmatex">\(X \sim N(\mu, \sigma^2)\)</span> ，其中 <span class="arithmatex">\((X_1, X_2,..., X_n)\)</span> 是来自总体 <span class="arithmatex">\(X\)</span> 的简单随机样本， <span class="arithmatex">\(\bar X\)</span> 是样本均值，<span class="arithmatex">\(S^2\)</span> 是样本均值，则：</p>
+<p><span class="arithmatex">\((1) \quad \bar X \sim N(\mu, \frac{\sigma^2}{n}), 即\frac{\bar X - \mu}{\sigma / \sqrt{n}} \sim N(0, 1);\)</span></p>
+<p><span class="arithmatex">\((2) \quad \bar X 与 S^2 相互独立;\)</span></p>
+<p><span class="arithmatex">\((3) \quad \frac{(n-1)S^2}{\sigma^2} = \frac{1}{\sigma^2}{\sum\limits_{i=1}^{n}}(X_i - \bar X)^2 = \sim \chi^2(n-1);\)</span></p>
+<p><span class="arithmatex">\(变式：(3) \quad \frac{1}{\sigma^2}{\sum\limits_{i=1}^{n}}(X_i - \mu)^2 = {\sum\limits_{i=1}^{n}}(\frac{X_i - \mu}{\sigma})^2 \sim \chi^2(n);\)</span></p>
+<p><span class="arithmatex">\((4) \quad \frac{\bar X - \mu}{S / \sqrt{n}} \sim t(n-1).\)</span></p>
 
 
 
